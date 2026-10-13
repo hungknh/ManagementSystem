@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Management System</title>
+  <meta name="description" content="Learn web development with our courses on HTML, CSS, Bootstrap, and JavaScript." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark navbar-brand-custom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Management System</a>
+      <div class="dropdown">
+        <button class="btn btn-sm text-white dropdown-toggle" type="button" data-bs-toggle="dropdown">Home</button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="login.html">Login</a></li>
+          <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+          <li><a class="dropdown-item" href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="container">
+    <div class="text-center bg-light rounded-4 shadow-sm my-4 py-5 px-4">
+      <h1 class="fw-bold">Welcome to My Website</h1>
+      <p class="text-secondary mb-0">Learn web development with our courses.</p>
+    </div>
+  </div>
+
+  <!-- COURSES -->
+  <section class="container pb-5">
+    <h2 class="text-center fw-bold mb-4">Our Courses</h2>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card hover-card course-card html-card h-100 p-4">
+          <h3 class="fs-5 fw-bold">HTML</h3>
+          <p class="small text-secondary">Learn how to create the structure of web pages using headings, paragraphs, images, and links.</p>
+          <button class="btn btn-sm text-white align-self-start mt-auto" style="background:#e67e22" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="html">Learn More</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card hover-card course-card css-card h-100 p-4">
+          <h3 class="fs-5 fw-bold">CSS</h3>
+          <p class="small text-secondary">Learn how to style web pages with colors, fonts, spacing, and attractive layouts.</p>
+          <button class="btn btn-sm text-white align-self-start mt-auto" style="background:#3498db" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="css">Learn More</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card hover-card course-card boot-card h-100 p-4">
+          <h3 class="fs-5 fw-bold">Bootstrap</h3>
+          <p class="small text-secondary">Build responsive websites quickly using Bootstrap's grid system and components.</p>
+          <button class="btn btn-sm text-white align-self-start mt-auto" style="background:#8e44ad" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="bootstrap">Learn More</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card hover-card course-card js-card h-100 p-4">
+          <h3 class="fs-5 fw-bold">JavaScript</h3>
+          <p class="small text-secondary">Make web pages interactive with button clicks, form validation, and dynamic content.</p>
+          <button class="btn btn-sm text-white align-self-start mt-auto" style="background:#c8a800" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="js">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE MODAL -->
+  <div class="modal fade" id="courseModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h4 id="modalCourseName" class="fw-bold"></h4>
+          <p id="modalCourseDesc" class="text-secondary"></p>
+          <ul id="modalTopics"></ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-custom text-center py-4">
+    <p class="text-white fw-bold mb-1">Management System</p>
+    <p class="text-white-50 small mb-0">&copy; 2026 Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* =============================================
+   MANAGEMENT SYSTEM — GLOBAL STYLES
+   Built on Bootstrap 5. Only brand-specific rules
+   that Bootstrap utilities can't express live here.
+   Shared by index.html, home.html, login.html, signup.html.
+   ============================================= */
+
+:root {
+  --navy: #1e2d4a;
+  --blue: #4f72c4;
+  --blue-hover: #3a5aad;
+  --violet: #5b6ef5;
+  --violet-2: #7c4dff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-brand-custom { background-color: var(--navy) !important; }
+
+/* ---------- Hero carousel (index.html) ---------- */
+.hero-carousel .carousel-item {
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-carousel .carousel-caption-custom {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgba(20, 35, 70, .82) 0%, rgba(20, 35, 70, .55) 60%, rgba(20, 35, 70, .25) 100%);
+}
+
+.hero-carousel .inner {
+  max-width: 560px;
+  padding: 0 80px;
+  color: #fff;
+  text-align: left;
+}
+
+.hero-carousel .eyebrow {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: .9;
+}
+
+.btn-primary-custom {
+  background: var(--blue);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 14px rgba(79, 114, 196, .4);
+}
+.btn-primary-custom:hover {
+  background: var(--blue-hover);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero-carousel .inner { padding: 0 32px; }
+}
+
+/* ---------- Hover cards (feature cards + course cards) ---------- */
+.hover-card {
+  transition: transform .28s cubic-bezier(.34, 1.56, .64, 1), box-shadow .28s ease;
+}
+.hover-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(79, 114, 196, .18), 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+/* Course card accent colors (home.html) */
+.course-card { border-left: 5px solid transparent; }
+.course-card.html-card { border-left-color: #e67e22; background: #fffaf5; }
+.course-card.css-card  { border-left-color: #3498db; background: #f5f9ff; }
+.course-card.boot-card { border-left-color: #8e44ad; background: #fdf5ff; }
+.course-card.js-card   { border-left-color: #f1c40f; background: #fffdf0; }
+.course-card.html-card h3 { color: #e67e22; }
+.course-card.css-card h3  { color: #3498db; }
+.course-card.boot-card h3 { color: #8e44ad; }
+.course-card.js-card h3   { color: #c8a800; }
+
+/* ---------- Footer ---------- */
+.footer-custom { background: var(--navy); }
+
+/* ---------- CTA section ---------- */
+.cta-custom { background: #eef2fc; }
+
+/* ---------- Auth pages (login.html / signup.html) ---------- */
+.auth-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2fb 0%, #dde5f8 50%, #e8edf9 100%);
+}
+
+.auth-logo {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--violet), var(--violet-2));
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(91, 110, 245, .35);
+}
+
+.btn-auth {
+  background: linear-gradient(135deg, var(--violet), var(--violet-2));
+  border: none;
+  box-shadow: 0 4px 16px rgba(91, 110, 245, .4);
+}
+.btn-auth:hover {
+  opacity: .92;
+  box-shadow: 0 8px 24px rgba(91, 110, 245, .45);
+  color: #fff;
+}
+
+.strength-bar { height: 4px; }
